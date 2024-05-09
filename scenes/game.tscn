@@ -413,6 +413,21 @@ sources/0 = SubResource("TileSetAtlasSource_82nky")
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_avd2u"]
 
+[sub_resource type="Animation" id="Animation_p8ai3"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(131, 121)]
+}
+
 [sub_resource type="Animation" id="Animation_bs15n"]
 resource_name = "platform_move"
 length = 2.0
@@ -430,7 +445,13 @@ tracks/0/keys = {
 "values": [Vector2(131, 121), Vector2(197, 121)]
 }
 
-[sub_resource type="Animation" id="Animation_p8ai3"]
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_a5200"]
+_data = {
+"RESET": SubResource("Animation_p8ai3"),
+"platform_move": SubResource("Animation_bs15n")
+}
+
+[sub_resource type="Animation" id="Animation_8wbj4"]
 length = 0.001
 tracks/0/type = "value"
 tracks/0/imported = false
@@ -442,13 +463,7 @@ tracks/0/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [Vector2(131, 121)]
-}
-
-[sub_resource type="AnimationLibrary" id="AnimationLibrary_a5200"]
-_data = {
-"RESET": SubResource("Animation_p8ai3"),
-"platform_move": SubResource("Animation_bs15n")
+"values": [Vector2(386, 37)]
 }
 
 [sub_resource type="Animation" id="Animation_ob6lh"]
@@ -466,21 +481,6 @@ tracks/0/keys = {
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
 "values": [Vector2(386, 37), Vector2(448, 37)]
-}
-
-[sub_resource type="Animation" id="Animation_8wbj4"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath(".:position")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector2(386, 37)]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_2vq3g"]

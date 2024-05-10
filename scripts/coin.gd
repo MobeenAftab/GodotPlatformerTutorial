@@ -1,9 +1,8 @@
 extends Area2D
 
-# Signls trigger code based on events.
-
+@onready var game_manager = %GameManager
 
 func _on_body_entered(body):
 	print("Money up!")
-	# Remove coin from scene.
+	game_manager.add_coin()
 	queue_free()

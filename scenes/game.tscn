@@ -1,4 +1,4 @@
-[gd_scene load_steps=19 format=3 uid="uid://cig00decwt2lx"]
+[gd_scene load_steps=21 format=3 uid="uid://cig00decwt2lx"]
 
 [ext_resource type="PackedScene" uid="uid://c5txffwgxtehu" path="res://scenes/player.tscn" id="1_5yowq"]
 [ext_resource type="Texture2D" uid="uid://conke1ve7udxw" path="res://assets/sprites/world_tileset.png" id="2_0vv72"]
@@ -6,6 +6,8 @@
 [ext_resource type="PackedScene" uid="uid://8nmykibrs6s6" path="res://scenes/coin.tscn" id="4_8wrmh"]
 [ext_resource type="PackedScene" uid="uid://bltnmaksai8sd" path="res://scenes/killzone.tscn" id="5_6ugnf"]
 [ext_resource type="PackedScene" uid="uid://c10efstycdwxh" path="res://scenes/slime.tscn" id="6_80fi7"]
+[ext_resource type="FontFile" uid="uid://cohhcikm3axbf" path="res://assets/fonts/PixelOperator8-Bold.ttf" id="7_rttqx"]
+[ext_resource type="FontFile" uid="uid://raxxi5jqjav7" path="res://assets/fonts/PixelOperator8.ttf" id="8_cmns0"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_82nky"]
 texture = ExtResource("2_0vv72")
@@ -612,3 +614,42 @@ position = Vector2(152, -49)
 
 [node name="Slime3" parent="Slimes" instance=ExtResource("6_80fi7")]
 position = Vector2(73, 31)
+
+[node name="Labels" type="Node" parent="."]
+
+[node name="Label" type="Label" parent="Labels"]
+offset_left = -100.0
+offset_top = 65.0
+offset_right = -3.0
+offset_bottom = 74.0
+theme_override_fonts/font = ExtResource("7_rttqx")
+theme_override_font_sizes/font_size = 8
+text = "Space To Jump"
+
+[node name="Label3" type="Label" parent="Labels"]
+offset_left = -46.0
+offset_top = -14.0
+offset_right = 17.0
+offset_bottom = -4.0
+theme_override_fonts/font = ExtResource("7_rttqx")
+theme_override_font_sizes/font_size = 8
+text = "W, A, S, D
+"
+
+[node name="Label4" type="Label" parent="Labels"]
+offset_left = -82.0
+offset_top = -2.0
+offset_right = 45.0
+offset_bottom = 8.0
+theme_override_fonts/font = ExtResource("7_rttqx")
+theme_override_font_sizes/font_size = 8
+text = "You Know The Drill"
+
+[node name="Label2" type="Label" parent="Labels"]
+offset_left = 100.0
+offset_top = 6.0
+offset_right = 217.0
+offset_bottom = 16.0
+theme_override_fonts/font = ExtResource("8_cmns0")
+theme_override_font_sizes/font_size = 8
+text = "GET YOUR MONEY UP!"
